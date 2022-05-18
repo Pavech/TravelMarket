@@ -1,12 +1,8 @@
-import time
-
-import pytest
-
 from fixtures.constants import LoginMessages
 
 
 class TestLoginPage:
-    @pytest.mark.xfail()
+
     def test_valid_login(self, app):
         """
         Valid logging.
@@ -15,7 +11,7 @@ class TestLoginPage:
         username = LoginMessages.LOGIN
         password = LoginMessages.PASSWORD
         app.login_page.entry_data(username=username, password=password)
-        assert app.login_page.dropdown_toggle_main_page == LoginMessages.LOGIN
+        assert app.login_page.dropdown_toggle_main_page() == LoginMessages.LOGIN
 
     def test_empty_username(self, app):
         """

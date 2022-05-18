@@ -70,33 +70,4 @@ class BasePage:
         element = self._find_element(locator, wait_time)
         element.clear()
 
-    def re_fresh(self, locator, wait_time=20):
-        """
-        Refresh element.
-        """
-        element = self._find_element(locator, wait_time)
-        element.send_keys(Keys.F5)
 
-    def text_on_all_same_fields(self, locator, wait_time=10) -> list:
-        """
-        Get elementS text.
-        """
-        elements = self._find_all_elements(locator, wait_time)
-        biba = []
-        for i in elements:
-            n = i.text
-            biba.append(n)
-        return biba
-
-    def wait_element_text(self, locator, text, wait_time=5):
-        """
-        Реализация слипа через явные ожидания.
-        """
-        timestamp = time.time() + wait_time
-        while time.time() < timestamp:
-            element = self._find_element(locator)
-            print(element.text, text)
-            if element.text == text:
-                return text
-            time.sleep(0.5)
-        raise Exception

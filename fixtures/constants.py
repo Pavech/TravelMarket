@@ -17,5 +17,14 @@ class LoginMessages:
     LOGIN = "Aleppo"
     PASSWORD = "qwerqwerqwerqwer"
     LOG_IN = "Log in"
-    ERROR_USERNAME_OR_PASS = f"Please enter a correct username and password. " \
+    ERROR_USERNAME_OR_PASS = f"Please enter a correct username and password." \
                              f"Note that both fields may be case-sensitive."
+
+
+class OrderMessages:
+    LOGIN = "Aleppo"
+    PASSWORD = "qwerqwerqwerqwer"
+    BASKETS_HEADER = "Your booking: Aleppo"
+    CUSTOMER = "customer: Aleppo"
+    YOUR_ORDER = "Ваши заказы, Aleppo"
+

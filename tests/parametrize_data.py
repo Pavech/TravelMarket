@@ -1,5 +1,5 @@
 class Data:
-    VALID_SPECIAL_CHARACTERS = [
+    VALID_SPECIAL_SYMBOLS = [
         "@",
         ".",
         "+",
@@ -7,7 +7,7 @@ class Data:
         "_"
     ]
 
-    INVALID_SPECIAL_CHARACTERS = [
+    INVALID_SPECIAL_SYMBOLS = [
         "!",
         "#",
         "$",

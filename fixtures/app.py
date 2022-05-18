@@ -1,5 +1,5 @@
 from fixtures.pages.registration_page import RegistrationPage
-from fixtures.pages.order_list_page import OrderPage
+from fixtures.pages.order_page import OrderPage
 from fixtures.pages.login_page import LoginPage
 
 

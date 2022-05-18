@@ -20,7 +20,7 @@ class LoginPage(BasePage):
 
     def entry_data(self, username, password):
         """
-        Upload image on reg page.
+        Data entry in fields.
         """
         self.clear(locator=self.USERNAME_LOGIN)
         self.fill(locator=self.USERNAME_LOGIN, value=username)
