@@ -59,7 +59,7 @@ class TestRegistrationPage:
         app.registration_page.entry_data_registration(data=data)
         assert app.registration_page.text_error() == RegisterMessages.PASS_DIDNT_MATCH
 
-    @pytest.mark.parametrize("valid", Data.VALID_SPECIAL_CHARACTERS)
+    @pytest.mark.parametrize("valid", Data.VALID_SPECIAL_SYMBOLS)
     def test_valid_username_special_character(self, app, valid):
         """
         Registration with valid special characters.
@@ -70,7 +70,7 @@ class TestRegistrationPage:
         app.registration_page.entry_data_registration(data=data)
         assert app.registration_page.text_log_in() == RegisterMessages.LOG_IN
 
-    @pytest.mark.parametrize("invalid", Data.INVALID_SPECIAL_CHARACTERS)
+    @pytest.mark.parametrize("invalid", Data.INVALID_SPECIAL_SYMBOLS)
     def test_invalid_username_special_character(self, app, invalid):
         """
         Registration with invalid special characters.
