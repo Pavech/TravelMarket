@@ -21,19 +21,6 @@ class BasePage:
         )
         return element
 
-    def _find_all_elements(self, locator, wait_time=20):
-        """
-        Find element. Use Explicit wait
-        :param locator: locator like (By.ID, 'name')
-        :param wait_time: wait time
-        :return: return selenium element
-        """
-        elements = WebDriverWait(self.app.driver, wait_time).until(
-            EC.presence_of_all_elements_located(locator),
-            message=f"Can't find element by locator {locator}",
-        )
-        return elements
-
     def click_element(self, locator, wait_time=20):
         """
         Click element.
@@ -69,5 +56,3 @@ class BasePage:
         """
         element = self._find_element(locator, wait_time)
         element.clear()
-
-
