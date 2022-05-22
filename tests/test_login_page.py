@@ -41,7 +41,7 @@ class TestLoginPage:
         username = LoginMessages.LOGIN
         password = "errrorpass123"
         app.login_page.entry_data(username=username, password=password)
-        assert app.login_page.text_error_login_page() == LoginMessages.ERROR_USERNAME_OR_PASS
+        assert app.login_page.text_error_login_page() == LoginMessages.ERR_USERNAME_PASS
 
     def test_invalid_login(self, app):
         """
@@ -51,7 +51,7 @@ class TestLoginPage:
         username = "errorlogin"
         password = LoginMessages.PASSWORD
         app.login_page.entry_data(username=username, password=password)
-        assert app.login_page.text_error_login_page() == LoginMessages.ERROR_USERNAME_OR_PASS
+        assert app.login_page.text_error_login_page() == LoginMessages.ERR_USERNAME_PASS
 
     def test_invalid_login_and_password(self, app):
         """
@@ -61,4 +61,4 @@ class TestLoginPage:
         username = "errorlogin"
         password = "errrorpass123"
         app.login_page.entry_data(username=username, password=password)
-        assert app.login_page.text_error_login_page() == LoginMessages.ERROR_USERNAME_OR_PASS
+        assert app.login_page.text_error_login_page() == LoginMessages.ERR_USERNAME_PASS

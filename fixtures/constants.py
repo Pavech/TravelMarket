@@ -21,10 +21,7 @@ class LoginMessages:
     LOGIN = "Aleppo"
     PASSWORD = "qwerqwerqwerqwer"
     LOG_IN = "Log in"
-    ERROR_USERNAME_OR_PASS = (
-        "Please enter a correct username and password. "
-        "Note that both fields may be case-sensitive."
-    )
+    ERR_USERNAME_PASS = "Please enter a correct username and password. Note that both fields may be case-sensitive."
 
 
 class OrderMessages:
