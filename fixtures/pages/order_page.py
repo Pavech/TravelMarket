@@ -19,13 +19,23 @@ class OrderPage(BasePage):
     TEXT_ORDER = (By.CLASS_NAME, "head")
     LOOK_ORDER = (By.XPATH, "//*[@class='table orders_list']//a[1]")
     CUSTOMER = (By.XPATH, "//*[contains(text(),'customer')]")
+    INFO_COUNTRY_IN_BASKET = "//*[@class='col-form-label']//b[1]"
+    INFO_ACCOMMODATION_IN_BASKET = (
+        "//*[@class='row flex-wrap form-group col-lg-sm text']//span[2]/b"
+    )
+    INFO_PRICE_IN_BASKET = (
+        "//*[@class='row flex-wrap form-group col-lg-sm text']//span[3]/b"
+    )
+    INFO_COUNT_NIGHTS_IN_BASKET = (
+        "//*[@class='row flex-wrap form-group col-lg-sm text']//span[4]/b"
+    )
+    STATUS_ORDER = "//*[@class='table orders_list']//td[4]"
 
     def open_login_page(self):
         """
         Open login page.
         """
         self.open_page(self.app.url)
-
         self.click_element(locator=self.BUTTON_SING_IN)
 
     def login(self, username, password):
@@ -44,7 +54,7 @@ class OrderPage(BasePage):
         """
         self.click_element(locator=self.BUTTON)
 
-    def card_on_list_of_accommodation(self) -> str:
+    def card_on_list(self) -> str:
         """
         Hotel card on list of accommodation.
         """
@@ -85,6 +95,34 @@ class OrderPage(BasePage):
         element = self.text(locator=self.TEXT_CUSTOMER_ORDER_CREATE)
         return element
 
+    def info_hotel_in_basket_country(self):
+        """
+        Hotel information in the cart - country.
+        """
+        element = self.text(locator=self.INFO_COUNTRY_IN_BASKET)
+        return element
+
+    def info_hotel_in_basket_accommodation(self):
+        """
+        Hotel information in the cart - accommodation.
+        """
+        element = self.text(locator=self.INFO_ACCOMMODATION_IN_BASKET)
+        return element
+
+    def info_hotel_in_basket_price(self):
+        """
+        Hotel information in the cart - price.
+        """
+        element = self.text(locator=self.INFO_PRICE_IN_BASKET)
+        return element
+
+    def info_hotel_in_basket_count_nights(self):
+        """
+        Hotel information in the cart - count of nights.
+        """
+        element = self.text(locator=self.INFO_COUNT_NIGHTS_IN_BASKET)
+        return element
+
     def click_button_order_save(self):
         """
         Order save
@@ -109,4 +147,11 @@ class OrderPage(BasePage):
         Name customer.
         """
         element = self.text(locator=self.CUSTOMER)
+        return element
+
+    def text_status_order(self):
+        """
+        Name customer.
+        """
+        element = self.text(locator=self.STATUS_ORDER)
         return element
