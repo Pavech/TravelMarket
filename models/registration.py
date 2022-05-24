@@ -19,11 +19,10 @@ class RegisterUserModel:
 
     @staticmethod
     def random():
-        username = faker.last_name()
+        username = faker.first_name() + faker.last_name()
         firstname = faker.first_name()
         email = faker.email()
         password = faker.password()
         logging.info(f"user: {username}, email: {email}, pass: {password}, firstname: {firstname}")
         return RegisterUserModel(email=email, password_1=password,
                                  password_2=password, firstname=firstname, username=username)
-
