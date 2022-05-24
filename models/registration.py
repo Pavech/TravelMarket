@@ -19,7 +19,7 @@ class RegisterUserModel:
 
     @staticmethod
     def random():
-        username = faker.first_name() + faker.last_name()
+        username = faker.first_name_female() + faker.last_name_nonbinary()
         firstname = faker.first_name()
         email = faker.email()
         password = faker.password()
