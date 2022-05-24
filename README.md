@@ -1,6 +1,6 @@
 # TravelMarket
 
-![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:TravelMarket_2_BuildPavelTravelMarket/statusIcon.svg) [![Python application](https://github.com/Pavech/TravelMarket/actions/workflows/python-app.yml/badge.svg)](https://github.com/Pavech/TravelMarket/actions/workflows/python-app.yml)
+[![Python application](https://github.com/Pavech/TravelMarket/actions/workflows/python-app.yml/badge.svg)](https://github.com/Pavech/TravelMarket/actions/workflows/python-app.yml) ![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:TravelMarket_2_BuildPavelTravelMarket/statusIcon.svg)
 
 Итоговый проект:
 
