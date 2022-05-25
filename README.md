@@ -73,7 +73,7 @@ pytest --alluredir=allureres
 ```
 - To see the actual report after your tests
 ```angular2html
-pytest --alluredir=allureres
+allure serve allureres
 ```
 
 <h5>Test-cases</h5>
