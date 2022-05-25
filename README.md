@@ -24,49 +24,62 @@
 
  • Selenium
 
-Web application:
+<h5>Web application:</h5>
+
 ```angular2html
 https://cypress-tourism-app.herokuapp.com
 ```
-Create virtual environment:
+<h5>Create virtual environment:</h5>
 
 ```angular2html
 python3 -m venv env
 ```
 
-Activate virtual environment:
+<h5>Activate virtual environment:</h5>
+
 ```angular2html
 source env/bin/activate
 ```
 
-Install requirements:
+<h5>Install requirements:</h5>
 
 ```angular2html
 pip3 install -r requirements.txt
 ```
 
-Run tests:
+<h5>Run tests:</h5>
 
 ```angular2html
 pytest
 ```
 
-Logging
+<h5>Logging:</h5>
 
 ```angular2html
 https://docs.python.org/3/library/logging.html
 ```
 
-Code review
+<h5>Code review:</h5>
 
 ```angular2html
 https://pre-commit.com/
 ```
 
-Test results
+<h5>Test results:</h5>
+
+- To enable Allure listener
+```angular2html
+pytest --alluredir=allureres
+```
+- To see the actual report after your tests
+```angular2html
+pytest --alluredir=allureres
+```
+
+<h5>Test-cases</h5>
 
 ```angular2html
-https://docs.qameta.io/allure/
+testcases.xlsx
 ```
 
 ### План работы:
